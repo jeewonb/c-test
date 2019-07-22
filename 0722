@@ -1,0 +1,27 @@
+using System;
+
+namespace Documents
+{
+    class Program
+    {
+        static void Main()
+        {
+            // 1. 현재 SP 점수와 희망 SP 점수 입력 받기
+            Console.WriteLine("이번 SP 시험의 희망 점수는? ");
+            string goalS = Console.ReadLine();
+            Console.WriteLine("가장 최근의 SP 시험 점수는? ");
+            string currentS = Console.ReadLine();
+
+            // 3. 목표 성적 상승률 계산 후 출력
+            if(currentS == null)
+            {
+                Console.WriteLine("첫 시험 화이팅!");   
+            }
+            else
+            {
+                int rate = (Convert.ToInt32(goalS) - Convert.ToInt32(currentS)) * 100 / Convert.ToInt32(currentS);
+                Console.WriteLine("희망 목표 상승률은: {0}% 입니다.", rate);   
+            }
+        }
+    }
+}
